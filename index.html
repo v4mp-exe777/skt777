@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #3d3d88;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #242448;
+            width: 100%;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 36px;
+            color: #f2f2f2;
+            margin-left: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            transform: rotate(-10deg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            transform: rotate(10deg);
+            z-index: -1;
+        }
+
+        nav {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #f2f2f2;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+            padding: 8px 16px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #5757a3;
+            border-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 100px auto 20px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Lucida Sans', 'Lucida Grande', Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 20px;
+            font-size: 36px;
+            color: #f2f2f2;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 28px;
+            margin: 20px 0;
+            text-align: center;
+            color: #e3e3e3;
+        }
+
+        h3 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 24px;
+            margin: 15px 0;
+            text-align: center;
+            color: #e3e3e3;
+        }
+
+        p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 15px auto;
+            text-align: justify;
+            padding: 0 20px;
+            color: #e0e0e0;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .icons {
+            position: fixed;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .icons i {
+            color: #fff;
+            font-size: 40px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .icons i:hover {
+            transform: scale(1.2);
+        }
+
+        .video-container {
+            max-width: 1000px;
+            margin: 20px auto;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
+
+        .competitions {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .competitions li {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Duarte</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#skaters">Skatistas</a>
+            <a href="#contact">Contato</a>
+            <a href="#about">Sobre</a>
+        </nav>
+    </header>
+
+    <div class="icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <div class="container">
+        <h1 class="introducao">Skatistas Brasileiros: Os Fenômenos Sob 4 Rodas</h1>
+
+        <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/a12d/live/c4c940a0-4abe-11ef-bb49-a36eaef82210.jpg.webp" alt="Rayssa Leal">
+
+        <h2 class="titulo" id="skaters">Melhores Skatistas do Brasil</h2>
+
+        <h3>1. Felipe Gustavo</h3>
+        <img src="https://f.i.uol.com.br/fotografia/2023/10/07/16967088306521b8de7fbe0_1696708830_3x2_md.jpg" alt="Felipe Gustavo">
+        <p>Felipe Gustavo é um filho de Brasília, é lá onde se sente em casa, onde as pessoas conhecem sua história. Criado no setor bancário, pico cheio de chão liso e bancos extensos, ele teve acesso ao que há de melhor para quem ama o skate raiz. Isso fez de Felipe um dos melhores do mundo no pop.</p>
+        <h4>Principais Campeonatos:</h4>
+        <ul class="competitions">
+            <li>Street League Skateboarding (SLS)</li>
+            <li>X Games</li>
+            <li>Red Bull Skate Arcade</li>
+        </ul>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Ep_tWdA6NwU" title="Felipe Gustavo Manobra" allowfullscreen></iframe>
+        </div>
+
+        <h3>2. Thiago Lemos</h3>
+        <img src="https://pocketskatemag.com/wp-content/uploads/2023/01/Bildschirmfoto-2023-01-09-um-20.18.14.jpg" alt="Thiago Lemos">
+        <p>Thiago Lemos é aquele cara que representa a essência do skate de rua. Além de ser um monstro no shape, conhecido por suas manobras técnicas e precisas, o estilo dele vai além das tricks. No dia a dia, Thiago curte um visual bem autêntico, sempre mantendo a vibe do streetwear. Ele costuma usar roupas confortáveis, como camisetas largas, calças folgadas e tênis de skate clássicos, tudo com uma pegada despojada, mas com atitude. O boné e as meias altas são praticamente a marca registrada dele, sempre com aquele ar de quem domina tanto o asfalto quanto o estilo.</p>
+        <h4>Principais Campeonatos:</h4>
+        <ul class="competitions">
+            <li>Street League Skateboarding (SLS)</li>
+            <li>X Games</li>
+            <li>São Paulo Skate Festival</li>
+        </ul>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/mTwwVDZSDVw" title="Thiago Lemos Manobra" allowfullscreen></iframe>
+        </div>
+
+        <h3>3. Giovanni Viana</h3>
+        <img src="https://www.olimpiadatododia.com.br/wp-content/uploads/2023/12/Design-sem-nome-2023-12-03T164925.434.jpg" alt="Giovanni Viana">
+        <p>Giovanni Viana é um nome que sempre está em alta no skate. Vindo de Santo André, ele representa a nova geração com muita atitude. No shape, Giovanni é pura energia, conhecido por suas manobras agressivas e estilo fluído. No visual, ele também não deixa a desejar, sempre mandando bem com roupas que traduzem a essência do skate.</p>
+        <h4>Principais Campeonatos:</h4>
+        <ul class="competitions">
+            <li>World Skateboarding League (WSL)</li>
+            <li>Brasil Skate Cup</li>
+            <li>Red Bull Skate Generation</li>
+        </ul>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/sGBqj31a35U" title="Giovanni Viana Manobra" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
